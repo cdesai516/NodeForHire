@@ -25,8 +25,9 @@ import Profile from "./components/profile/Profile";
 import Posts from "./components/posts/Posts";
 import Post from "./components/post/Post";
 import NotFound from "./components/not-found/NotFound";
-import Role from "./components/vendor/Role";
+
 import VendorDashboard from "./components/vendor/VendorDashboard";
+import Role from "./components/vendor/Role";
 import "./App.css";
 
 // Check for token
@@ -89,7 +90,7 @@ class App extends Component {
                 />
               </Switch>
               <Switch>
-                <PrivateRoute exact path="/vendor/newRole" component={Role} />
+                <PrivateRoute exact path="/newRole" component={Role} />
               </Switch>
               <Switch>
                 <PrivateRoute

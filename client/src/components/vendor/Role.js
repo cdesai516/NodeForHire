@@ -11,8 +11,6 @@ class Role extends Component {
     super(props);
     this.state = {
       errors: {},
-      name: "",
-      avatar: "",
       vendor: true,
       date: "",
       roleName: "",
@@ -37,7 +35,6 @@ class Role extends Component {
     e.preventDefault();
 
     const newRole = {
-      name: this.state.name,
       vendor: true,
       date: this.state.date,
       roleName: this.state.roleName,
@@ -143,7 +140,6 @@ class Role extends Component {
 }
 
 Role.propTypes = {
-  role: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
 };
 

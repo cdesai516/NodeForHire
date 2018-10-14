@@ -43,7 +43,7 @@ class VendorDashboard extends Component {
     }
 
     return (
-      <div className="dashboard">
+      <div className="Vendordashboard">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
