@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 
 // Create Schema
 const RoleSchema = new Schema({
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: "users"
+  },
   vendor: {
     type: Boolean
   },
