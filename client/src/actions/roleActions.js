@@ -1,14 +1,6 @@
 import axios from "axios";
 
-import {
-  GET_PROFILE,
-  GET_PROFILES,
-  PROFILE_LOADING,
-  CLEAR_ERRORS,
-  GET_ERRORS,
-  ADD_ROLE,
-  SET_CURRENT_USER
-} from "./types";
+import { CLEAR_ERRORS, GET_ERRORS, ADD_ROLE } from "./types";
 
 // Add Post
 export const addRole = roleData => dispatch => {
