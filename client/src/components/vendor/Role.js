@@ -10,15 +10,14 @@ class Role extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      errors: {},
-      vendor: true,
       date: "",
       roleName: "",
       endClient: "",
       location: "",
       roleDesc: "",
       qualifications: "",
-      preferredSkills: ""
+      preferredSkills: "",
+      errors: {}
     };
 
     this.onChange = this.onChange.bind(this);
@@ -34,8 +33,9 @@ class Role extends Component {
   onSubmit(e) {
     e.preventDefault();
 
+    const { user } = this.props.auth;
+
     const newRole = {
-      vendor: true,
       date: this.state.date,
       roleName: this.state.roleName,
       endClient: this.state.endClient,
@@ -125,11 +125,13 @@ class Role extends Component {
                   error={errors.preferredSkills}
                   info="If you want your latest repos and a Github link, include your username"
                 />
-                <input
+                <button
                   type="submit"
                   value="Submit"
                   className="btn btn-info btn-block mt-4"
-                />
+                >
+                  Submit
+                </button>
               </form>
             </div>
           </div>
@@ -140,18 +142,13 @@ class Role extends Component {
 }
 
 Role.propTypes = {
-  errors: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired,
+  addRole: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
-  vendor: true,
-  date: state.date,
-  roleName: state.roleName,
-  endClient: state.endClient,
-  location: state.location,
-  roleDesc: state.roleDesc,
-  qualifications: state.qualifications,
-  preferredSkills: state.preferredSkills,
+  auth: state.auth,
   errors: state.errors
 });
 

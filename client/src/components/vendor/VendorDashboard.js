@@ -34,7 +34,7 @@ class VendorDashboard extends Component {
           <div>
             <p className="lead text-muted">Welcome {user.name}</p>
             <p>Market Place Links</p>
-            <Link to="/vendor/newRole" className="btn btn-lg btn-info">
+            <Link to="/newRole" className="btn btn-lg btn-info">
               Post a New Requirement
             </Link>
           </div>

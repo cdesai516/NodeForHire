@@ -1,10 +1,7 @@
-import isEmpty from "../validation/is-empty";
-
 import { ADD_ROLE } from "../actions/types";
 
 const initialState = {
-  isAuthenticated: true,
-  role: {}
+  isAuthenticated: true
 };
 
 export default function(state = initialState, action) {
@@ -12,7 +9,7 @@ export default function(state = initialState, action) {
     case ADD_ROLE:
       return {
         ...state,
-        isAuthenticated: !isEmpty(action.payload),
+        isAuthenticated: action.payload,
         role: action.payload
       };
     default:

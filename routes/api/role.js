@@ -11,6 +11,7 @@ router.post(
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     const newRole = new Role({
+      user: req.user.id,
       vendor: req.body.vendor,
       date: req.body.date,
       roleName: req.body.roleName,

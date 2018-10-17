@@ -25,9 +25,9 @@ import Profile from "./components/profile/Profile";
 import Posts from "./components/posts/Posts";
 import Post from "./components/post/Post";
 import NotFound from "./components/not-found/NotFound";
-
-import VendorDashboard from "./components/vendor/VendorDashboard";
 import Role from "./components/vendor/Role";
+import VendorDashboard from "./components/vendor/VendorDashboard";
+
 import "./App.css";
 
 // Check for token

@@ -7,6 +7,9 @@ const RoleSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "users"
   },
+  userInfo: {
+    type: String
+  },
   vendor: {
     type: Boolean
   },
