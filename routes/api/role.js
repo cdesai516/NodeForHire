@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 
 // Post model
-const Role = require("../../models/role");
+const Role = require("../../models/Role");
 
 router.post(
   "/new",
